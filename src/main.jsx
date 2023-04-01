@@ -15,6 +15,7 @@ import Frients from './components/Friends/Frients';
 import FriendDetail from './components/FriendDetail/FriendDetail';
 import Posts from './components/Posts/Posts';
 import PostDetail from './components/PostDetail/PostDetail';
+import ErrorElement from './components/ErrorElement/ErrorElement';
 
 // const router = createBrowserRouter([
 //   {
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>, 
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       {
         path: '/',
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
       {
         path:'contact',
         element: <Contact></Contact>
+      },
+      {
+        path: '*',
+        element: <div>44444444444440444444444444</div>
       }
     ]
   }
